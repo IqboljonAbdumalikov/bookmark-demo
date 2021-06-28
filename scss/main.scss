@@ -1,3 +1,9 @@
 @import "_variables";
 @import "_general";
-@import "normalize";
+@import "_normalize";
+@import "blocks/visually-hidden";
+@import "blocks/container";
+@import "blocks/site-header";
+@import "blocks/sitenav";
+@import "blocks/logo";
+@import "blocks/site-hero";

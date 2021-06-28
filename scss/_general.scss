@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../webfonts/rubik-v12-latin-500.woff2") format("woff2"),
+         url("../webfonts/rubik-v12-latin-500.woff") format("woff");
+  }
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../webfonts/rubik-v12-latin-regular.woff2") format("woff2"),
+         url("../webfonts/rubik-v12-latin-regular.woff") format("woff");
+  }
 html {
     box-sizing: border-box;
 }
@@ -5,5 +19,22 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: "Rubik", "Arial", sans-serif;
+    background-color: #fff;
+    font-weight: 400;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, h4 {
+    margin-top: 0;
+    font-weight: 500;
 }

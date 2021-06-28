@@ -1,0 +1,21 @@
+.buttons-site-hero {
+    display: flex;
+    align-items: center;
+}
+.buttons-site-hero__button {
+    display: inline-block;
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.buttons-site-hero__button--blue {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+}
+.buttons-site-hero__button--white {
+    background-color: $dark-grey;
+}

@@ -5,5 +5,8 @@
             "extensionName": ".css",
             "savePath": "/css"
         }
-    ]
+    ],
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontLigatures": 400,
+    "editor.inlayHints.fontFamily": "Inconsolata"
 }
