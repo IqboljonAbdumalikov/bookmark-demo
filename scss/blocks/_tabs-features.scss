@@ -1,0 +1,33 @@
+.tabs-features {
+    display: flex;
+    justify-content: center;
+    max-width: 730px;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 72px;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+}
+.tabs-features__item {
+    width: calc(100% / 3);
+}
+.tabs-features__link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: rgba(36, 42, 69, 0.75);
+    line-height: 17px;
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 0.533333px;
+    padding-top: 32px;
+    padding-bottom: 28px;
+    transition: color 0.2s ease;
+    &:hover {
+        color: $dark-pink;
+    }
+}
+.tabs-features__item--active .tabs-features__link {
+    color: $dark-blue;
+    border-bottom: 4px solid $dark-pink;
+}

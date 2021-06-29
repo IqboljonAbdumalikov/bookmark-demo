@@ -1,0 +1,50 @@
+.panels-features {
+    background-image: url("../../images/features-slide-first-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 1065px 435px;
+    background-position: calc(50% - 550px) calc(50% - 85px);
+    padding-bottom: 258px;
+}
+.panel {
+    max-width: 445px;
+    margin-left: auto;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+.panel__heading {
+    color: $dark-blue;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 52px;
+    letter-spacing: -0.1px;
+}
+.panel__desc {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(36, 42, 69, 0.5);
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+.panel__more-info {
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 8px 22px;
+    color: #fff;
+    background-color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.2s linear,
+                border 0.3s ease,
+                color 0.2s linear;
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+    }
+
+}
