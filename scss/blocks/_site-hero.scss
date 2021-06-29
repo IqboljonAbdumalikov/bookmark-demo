@@ -1,21 +1,11 @@
 .site-hero {
-    width: 540px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.site-hero__heading {
-    font-size: 48px;
-    line-height: 52px;
-    letter-spacing: -0.15px;
-    margin-bottom: 24px;
-    color: $dark-blue;
-}
-.site-hero__desc {
-    font-size: 17.7px;
-    line-height: 28px;
-    margin-top: 0;
-    color: rgba(36, 42, 69, 0.5);
-    margin-bottom: 32px;
+    background-image: url("../images/site-hero-right-bg--desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1154.5px 485.5px;
+    background-position: calc(50% + 590px), calc(50% + 100px);
+    width: 100%;
+    min-height: 485.5px;
+    padding-top: 99px;
+    padding-bottom: 123px;
+    margin-bottom: 80px;
 }

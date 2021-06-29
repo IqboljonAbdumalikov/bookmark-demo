@@ -15,6 +15,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -47,6 +48,14 @@ img {
 h1, h2, h3, h4 {
   margin-top: 0;
   font-weight: 500;
+}
+
+.title {
+  max-width: 540px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 48px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -404,16 +413,23 @@ template {
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1210px;
   padding-right: 50px;
   padding-left: 50px;
   margin-right: auto;
   margin-left: auto;
 }
 
+.page__main-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 .site-header {
   padding-top: 48px;
   padding-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .site-header__container {
@@ -438,7 +454,7 @@ template {
   margin: 0;
 }
 
-.sitenav__item {
+.sitenav__item:not(.sitenav__item:first-of-type) {
   margin-left: 48px;
 }
 
@@ -465,8 +481,8 @@ template {
   color: #fff;
   border: 2px solid transparent;
   background-color: #fa5959;
-  -webkit-transition: background-color 0.1s linear, color 0.1s ease;
-  transition: background-color 0.1s linear, color 0.1s ease;
+  -webkit-transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
+  transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
 }
 
 .sitenav__link--bordered:hover {
@@ -482,6 +498,18 @@ template {
 }
 
 .site-hero {
+  background-image: url("../images/site-hero-right-bg--desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 1154.5px 485.5px;
+  background-position: calc(50% + 590px), calc(50% + 100px);
+  width: 100%;
+  min-height: 485.5px;
+  padding-top: 99px;
+  padding-bottom: 123px;
+  margin-bottom: 80px;
+}
+
+.site-hero__info {
   width: 540px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -495,7 +523,7 @@ template {
           align-items: flex-start;
 }
 
-.site-hero__heading {
+.site-hero__info__heading {
   font-size: 48px;
   line-height: 52px;
   letter-spacing: -0.15px;
@@ -503,11 +531,190 @@ template {
   color: #242a45;
 }
 
-.site-hero__desc {
+.site-hero__info__desc {
   font-size: 17.7px;
   line-height: 28px;
   margin-top: 0;
   color: rgba(36, 42, 69, 0.5);
   margin-bottom: 32px;
+}
+
+.buttons-site-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons-site-hero__button {
+  display: inline-block;
+  padding: 10px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
+  transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
+}
+
+.buttons-site-hero__button--blue {
+  border: 2px solid transparent;
+  color: #fff;
+  background-color: #5267df;
+  margin-right: 16px;
+}
+
+.buttons-site-hero__button--blue:hover {
+  border: 2px solid #5267df;
+  background-color: #fff;
+  color: #5267df;
+}
+
+.buttons-site-hero__button--white {
+  color: #242a45;
+  background-color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+}
+
+.buttons-site-hero__button--white:hover {
+  border: 2px solid #242a45;
+  background-color: transparent;
+}
+
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.features__header {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.features__heading {
+  color: #242a45;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 52px;
+  letter-spacing: -0.1px;
+}
+
+.features__info {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(36, 42, 69, 0.5);
+  margin: 0;
+}
+
+.features__panel {
+  display: none;
+}
+
+.features__panel--active {
+  display: block;
+}
+
+.tabs-features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 730px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  list-style-type: none;
+  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+}
+
+.tabs-features__item {
+  width: calc(100% / 3);
+}
+
+.tabs-features__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: rgba(36, 42, 69, 0.75);
+  line-height: 17px;
+  font-size: 16px;
+  text-transform: capitalize;
+  letter-spacing: 0.533333px;
+  padding-top: 32px;
+  padding-bottom: 28px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+.tabs-features__link:hover {
+  color: #fa5959;
+}
+
+.tabs-features__item--active .tabs-features__link {
+  color: #242a45;
+  border-bottom: 4px solid #fa5959;
+}
+
+.panels-features {
+  background-image: url("../../images/features-slide-first-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 1065px 435px;
+  background-position: calc(50% - 550px) calc(50% - 85px);
+  padding-bottom: 258px;
+}
+
+.panel {
+  max-width: 445px;
+  margin-left: auto;
+  padding-top: 57px;
+  padding-bottom: 57px;
+}
+
+.panel__heading {
+  color: #242a45;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 52px;
+  letter-spacing: -0.1px;
+}
+
+.panel__desc {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(36, 42, 69, 0.5);
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.panel__more-info {
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 8px 22px;
+  color: #fff;
+  background-color: #5267df;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  -webkit-transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
+  transition: background-color 0.2s linear, border 0.3s ease, color 0.2s linear;
+}
+
+.panel__more-info:hover {
+  border: 2px solid #5267df;
+  background-color: #fff;
+  color: #5267df;
 }
 /*# sourceMappingURL=main.css.map */

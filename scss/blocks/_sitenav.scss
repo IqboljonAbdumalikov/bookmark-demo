@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
 }
-.sitenav__item {
+.sitenav__item:not(.sitenav__item:first-of-type) {
     margin-left: 48px;
 }
 .sitenav__link {
@@ -28,8 +28,9 @@
     color: #fff;
     border: 2px solid transparent;
     background-color: $dark-pink;
-    transition: background-color 0.1s linear,
-                color 0.1s ease;
+    transition: background-color 0.2s linear,
+                border 0.3s ease,
+                color 0.2s linear;
     &:hover {
         background-color: #fff;
         color: $dark-pink;
