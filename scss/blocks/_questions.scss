@@ -1,0 +1,98 @@
+.questions {
+    margin-bottom: 150px;
+}
+.questions__heading {
+    color: $dark-blue;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 52px;
+    letter-spacing: -0.1px;
+}
+.questions__info {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(36, 42, 69, 0.5);
+    margin: 0;
+}
+.questions__list {
+    max-width: 540px;
+    margin: 0 auto;
+    margin-bottom: 54px;
+    text-align: center;
+}
+
+.questions__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    line-height: 32px;
+    transition: 0.4s;
+    border-top: 1px solid rgba(36, 42, 69, 0.15);
+}
+.questions__item--fourth {
+    border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+}
+.active.questions__item::after {
+    transform: rotate(180deg);
+}
+.active, .questions__item:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.questions__item::after {
+    content: "";
+    background-image: url("../../images/arrow-to-bottom.svg");
+    width: 16px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: transform 0.2s linear;
+}
+
+.questions__toggler {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+
+.questions__desc {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(36, 42, 69, 0.5);
+}
+.questions__more-info {
+    width: 115px;
+    text-transform: capitalize;
+    display: flex;
+    padding: 8px 22px;
+    color: #fff;
+    background-color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin: 0 auto;
+    transition: background-color 0.2s linear,
+                border 0.3s ease,
+                color 0.2s linear;
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+    }
+}
