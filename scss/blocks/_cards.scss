@@ -1,0 +1,84 @@
+.cards {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.card {
+    width: 280px;
+    box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20012);
+    border-radius: 15px;
+    text-align: center;
+    padding: 49px 24px 24px;
+}
+.card--chrome {
+    margin-right: 34px;
+}
+.card--firefox {
+    margin-right: 37px;
+    margin-top: 40px;
+}
+.card--opera {
+    margin-top: 80px;
+}
+.cards__img {
+    margin-bottom: 32px;
+}
+.cards__heading {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    margin-bottom: 6px;
+}
+.cards__desc {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 28px;
+    color: rgba(36, 42, 69, 0.5);
+}
+.cards__button::before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -24px;
+    left: -24px;
+    content: "";
+    width: 280px;
+    height: 4px;
+    background-image: url("../../images/dots-shape.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    background-position: center center;
+}
+.cards__button {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 8px 33px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-transform: capitalize;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    border: 2px solid transparent;
+    transition: background-color 0.2s linear,
+                border 0.3s ease,
+                color 0.2s linear;
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+    }
+}
