@@ -427,12 +427,22 @@ template {
 }
 
 .site-header {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 2px 0px 20px 5px #ececec;
+          box-shadow: 2px 0px 20px 5px #ececec;
   padding-top: 48px;
   padding-bottom: 48px;
   margin-bottom: 50px;
 }
 
 .site-header__container {
+  position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,6 +450,53 @@ template {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 6px;
+}
+
+.site-header__menu-toggler {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .site-header__menu-toggler {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    -webkit-transform: translateY(-75%);
+            transform: translateY(-75%);
+    display: block;
+    width: 18px;
+    height: 15px;
+    padding: 0;
+    border: none;
+    background-color: tranparent;
+    background-image: url("../../images/site-header-toggler--hamburger.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    outline-offset: 5px;
+  }
+  .site-header__menu-toggler::before {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 54px;
+    height: 54px;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+    content: "";
+  }
+  .site-header--open .site-header__menu-toggler {
+    background-image: url("../../images/site-header-toggler--close.svg");
+    background-color: transparent;
+  }
+  .site-header--open .logo__img {
+    background-image: url("../../images/site-header-logo--white.svg");
+  }
 }
 
 .sitenav__list {
@@ -491,13 +548,42 @@ template {
   border: 2px solid #fa5959;
 }
 
+@media only screen and (max-width: 768px) {
+  .sitenav {
+    display: none;
+  }
+}
+
 .site-header__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: inline-block;
   margin-right: auto;
   margin-left: 6px;
 }
 
+.logo__img {
+  display: block;
+}
+
+.logo--second {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header__logo {
+    margin: 0;
+  }
+  .site-header--open .logo {
+    display: none;
+  }
+  .site-header--open .logo--second {
+    display: block;
+  }
+}
+
 .site-hero {
+  margin-top: 150px;
   background-image: url("../images/site-hero-right-bg--desktop.svg");
   background-repeat: no-repeat;
   background-size: 1154.5px 485.5px;
@@ -507,6 +593,20 @@ template {
   padding-top: 99px;
   padding-bottom: 123px;
   margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .site-hero {
+    background-size: contain;
+    background-position: calc(50% + 490px), calc(50% + 100px);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-hero {
+    background-size: 950px 335px;
+    background-position: calc(50% + 200px) calc(50% - 200px);
+  }
 }
 
 .site-hero__info {
@@ -537,6 +637,20 @@ template {
   margin-top: 0;
   color: rgba(36, 42, 69, 0.5);
   margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .site-hero__info {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-hero__info {
+    margin: 380px auto 0;
+    text-align: center;
+    max-width: 500px;
+  }
 }
 
 .buttons-site-hero {
@@ -583,6 +697,12 @@ template {
 .buttons-site-hero__button--white:hover {
   border: 2px solid #242a45;
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+  .buttons-site-hero {
+    margin: 0 auto;
+  }
 }
 
 .features {
@@ -833,6 +953,16 @@ template {
   border: 2px solid #5267df;
   background-color: #fff;
   color: #5267df;
+}
+
+@media only screen and (max-width: 1200px) {
+  .cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .questions {

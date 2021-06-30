@@ -18,3 +18,18 @@
     color: rgba(36, 42, 69, 0.5);
     margin-bottom: 32px;
 }
+
+
+@include breakpoint-down(1200px) {
+    .site-hero__info {
+        max-width: 450px;
+    }
+}
+
+@include breakpoint-down(1000px) {
+    .site-hero__info {
+        margin: 380px auto 0;
+        text-align: center;
+        max-width: 500px;
+    }
+}

@@ -82,3 +82,12 @@
         color: $primary-color;
     }
 }
+
+
+@include breakpoint-down(1200px) {
+    .cards {
+        justify-content: center;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}

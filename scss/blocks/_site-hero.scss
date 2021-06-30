@@ -1,4 +1,5 @@
 .site-hero {
+    margin-top: 150px;
     background-image: url("../images/site-hero-right-bg--desktop.svg");
     background-repeat: no-repeat;
     background-size: 1154.5px 485.5px;
@@ -8,4 +9,19 @@
     padding-top: 99px;
     padding-bottom: 123px;
     margin-bottom: 80px;
+}
+
+
+@include breakpoint-down(1200px) {
+    .site-hero {
+        background-size: contain;
+        background-position: calc(50% + 490px), calc(50% + 100px);
+    }
+}
+
+@include breakpoint-down(1000px) {
+    .site-hero {
+        background-size: 950px 335px; 
+        background-position: calc(50% + 200px) calc(50% - 200px);
+    }
 }

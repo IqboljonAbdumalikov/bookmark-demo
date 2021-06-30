@@ -37,3 +37,9 @@
         border: 2px solid $dark-pink;
     }
 }
+
+@include breakpoint-down(768px) {
+    .sitenav {
+        display: none;
+    }
+}

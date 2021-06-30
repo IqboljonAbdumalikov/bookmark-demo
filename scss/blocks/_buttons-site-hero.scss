@@ -35,3 +35,9 @@
         background-color: transparent;
     }
 }
+
+@include breakpoint-down(1000px) {
+    .buttons-site-hero {
+        margin: 0 auto;
+    }
+}

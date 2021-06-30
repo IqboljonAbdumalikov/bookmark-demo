@@ -1,5 +1,24 @@
 .site-header__logo {
+    flex-shrink: 0;
     display: inline-block;
     margin-right: auto;
     margin-left: 6px;
+}
+.logo__img {
+    display: block;
+}
+.logo--second {
+    display: none;
+}
+
+@include breakpoint-down(768px) {
+    .site-header__logo {
+        margin: 0;
+    }
+    .site-header--open .logo {
+        display: none;
+    }
+    .site-header--open .logo--second {
+        display: block;
+    }
 }
