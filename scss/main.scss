@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_general";
 @import "_normalize";
+@import "_mixins";
 @import "blocks/visually-hidden";
 @import "blocks/container";
 @import "blocks/page";
@@ -16,3 +17,6 @@
 @import "blocks/extension";
 @import "blocks/cards";
 @import "blocks/questions";
+@import "blocks/join-us";
+@import "blocks/site-footer";
+@import "blocks/socials";

@@ -1,0 +1,13 @@
+.socials {
+    display: flex;
+    align-items: center;
+}
+.socials__link:not(.socials__link:first-child) {
+    margin-left: 40px;
+}
+.socials__link:hover svg path {
+    fill: $dark-pink;
+}
+svg path {
+    transition: fill 0.2s linear;
+}

@@ -44,8 +44,8 @@
 .active.questions__item::after {
     transform: rotate(180deg);
 }
-.active, .questions__item:hover {
-    background-color: rgb(247, 247, 247);
+.questions__item:hover {
+    color: $dark-pink;
 }
 
 .questions__item::after {
@@ -71,6 +71,10 @@
     font-size: 14px;
     line-height: 24px;
     color: rgba(36, 42, 69, 0.5);
+}
+.questions__desc--last {
+    border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+    padding-bottom: 14px;
 }
 .questions__more-info {
     width: 115px;

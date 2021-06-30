@@ -1,0 +1,24 @@
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+    
+  @mixin breakpoint-down ($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-up ($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-between ($min-breakpoint, $max-breakpoint) {
+    @media only screen and (min-width: $min-breakpoint) and (max-width: $max-breakpoint) {
+      @content;
+    }
+  }
+  
