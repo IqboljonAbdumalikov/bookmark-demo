@@ -2,14 +2,23 @@
     background-image: url("../../images/features-slide-first-bg.svg");
     background-repeat: no-repeat;
     background-size: 1065px 435px;
-    background-position: calc(50% - 550px) calc(50% - 85px);
-    padding-bottom: 258px;
+    width: 100%;
+    background-position: calc(50% - 550px) calc(50% - 30px);
+}
+.panels-features--second .container {
+    
+    background-image: url("../../images/features-slide-second-bg.svg");
+    display: none;
+}
+.panels-features--third .container {
+    background-image: url("../../images/features-slide-third-bg.svg");
+    display: none;
 }
 .panel {
     max-width: 445px;
     margin-left: auto;
     padding-top: 57px;
-    padding-bottom: 57px;
+    padding-bottom: 207px;
 }
 .panel__heading {
     color: $dark-blue;
@@ -47,4 +56,66 @@
         color: $primary-color;
     }
 
+}
+
+
+
+@include breakpoint-down(1000px) {
+    .panels-features {
+        width: 100%;
+        background-position: calc(50% - 200px) calc(50% - 170px);
+        padding-bottom: 40px;
+    }
+    .panel {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 510px;
+        padding-bottom: 0;
+    }
+}
+@include breakpoint-down(800px) {
+    .panels-features {
+        background-size: 865px 345px;
+    }
+    .panel {
+        padding-top: 415px;
+    }
+}
+@include breakpoint-down(500px) {
+    .panels-features {
+        background-size: 612px 238px;
+        background-position: calc(50% - 140px) calc(50% - 150px);
+    }
+    .panel {
+        padding-top: 270px;
+    }
+    .panel__heading {
+        font-size: 24px;
+        line-height: 52px;
+    }
+    .panel__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+@include breakpoint-down(450px) {
+    .panels-features {
+        background-size: 612px 238px;
+        background-position: calc(50% - 140px) calc(50% - 160px);
+    }
+    .panel {
+        padding-top: 270px;
+    }
+}
+@include breakpoint-down(350px) {
+    .panels-features {
+        background-size: 512px 188px;
+        background-position: calc(50% - 110px) calc(50% - 180px);
+    }
+    .panel {
+        padding-top: 250px;
+    }
+    .panel__heading {
+        line-height: 40px;
+    }
 }

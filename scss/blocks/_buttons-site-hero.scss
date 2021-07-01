@@ -4,13 +4,14 @@
 }
 .buttons-site-hero__button {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 8px 22px;
     font-weight: 500;
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.25px;
     text-decoration: none;
     border-radius: 5px;
+    white-space: nowrap;
     transition: background-color 0.2s linear,
                 border 0.3s ease,
                 color 0.2s linear;
@@ -39,5 +40,21 @@
 @include breakpoint-down(1000px) {
     .buttons-site-hero {
         margin: 0 auto;
+    }
+}
+@include breakpoint-down(600px) {
+    .buttons-site-hero__button {
+        padding: 8px 16px;
+    }
+}
+@include breakpoint-down(350px) {
+    .buttons-site-hero {
+        flex-direction: column;
+    }
+    .buttons-site-hero__button {
+        margin-right: 0;
+    }
+    .buttons-site-hero__button:not(.buttons-site-hero__button:last-child) {
+        margin-bottom: 20px;
     }
 }
