@@ -91,3 +91,27 @@
         padding-left: 50px;
     }
 }
+@include breakpoint-down(1100px) {
+    .cards {
+        padding: 0;
+    }
+}
+@include breakpoint-down(1000px) {
+    .cards {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .card {
+        margin-top: 0;
+        margin-right: 17px;
+        margin-left: 17px;
+    }
+    .card--opera {
+        margin-top: 40px;
+    }
+}
+@include breakpoint-down(700px) {
+    .card--firefox {
+        margin-top: 40px;
+    }
+}

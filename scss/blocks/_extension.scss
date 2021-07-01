@@ -1,5 +1,5 @@
 .extension__container {
-    margin-bottom: 149px;
+    margin-bottom: 140px;
 }
 .extension__heading {
     color: $dark-blue;
@@ -13,4 +13,16 @@
     line-height: 28px;
     color: rgba(36, 42, 69, 0.5);
     margin: 0;
+}
+
+@include breakpoint-down(600px) {
+    .extension__heading {
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: -0.075px;
+    }
+    .extension__info {
+        font-size: 15px;
+        line-height: 25px;
+    }
 }
