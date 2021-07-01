@@ -20,32 +20,41 @@
 .site-header__menu-toggler {
     display: none;
 }
+.site-header__socials {
+    display: none;
+}
 
 @include breakpoint-down(768px) {
-    // .site-header--open {
-    //     height: 100%;
-    //     opacity: 0.95;
-    //     background-color: $dark-blue;
-    // }
+    .site-header {
+        padding-top: 40px;
+    }
+    .site-header--open {
+        height: 100%;
+        opacity: 0.95;
+        background-color: $dark-blue;
+        transition: background-color 0.3s linear;
+        
+    }
     .site-header__container {
-        justify-content: center;
+        justify-content: flex-start;
     }
     .site-header__menu-toggler {
         position: absolute;
         right: 32px;
         top: 50%;
-        transform: translateY(-75%);
         display: block;
         width: 18px;
         height: 15px;
         padding: 0;
         border: none;
-        background-color: tranparent;
+        background-color: #fff;
         background-image: url("../../images/site-header-toggler--hamburger.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center;
         outline-offset: 5px;
+        cursor: pointer;
+        transform: translateY(-75%);
     }
     .site-header__menu-toggler::before {
         position: absolute;
@@ -55,14 +64,12 @@
         height: 54px;
         transform: translate(50%, -50%);
         content: "";
-
     }
     .site-header--open .site-header__menu-toggler {
         background-image: url("../../images/site-header-toggler--close.svg");
         background-color: transparent;
     }
     .site-header--open .logo__img {
-        
         background-image: url("../../images/site-header-logo--white.svg");
     }
 }

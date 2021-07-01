@@ -9,9 +9,13 @@
     border-bottom: 1px solid rgba(73, 93, 207, 0.2);
 }
 .tabs-features__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: calc(100% / 3);
 }
 .tabs-features__link {
+    width: 100%;
     text-align: center;
     display: block;
     text-decoration: none;
@@ -21,13 +25,38 @@
     text-transform: capitalize;
     letter-spacing: 0.533333px;
     padding-top: 32px;
-    padding-bottom: 28px;
+    white-space: nowrap;
+    padding-bottom: 24px;
+    border-bottom: 4px solid transparent;
     transition: color 0.2s ease;
     &:hover {
         color: $dark-pink;
     }
 }
 .tabs-features__item--active .tabs-features__link {
+    text-align: center;
     color: $dark-blue;
     border-bottom: 4px solid $dark-pink;
+}
+@include breakpoint-down(650px) {
+    .tabs-features {
+        flex-direction: column;
+        align-items: center;
+        border: none;
+    }
+    .tabs-features__item--active .tabs-features__link {
+        width: 170px;
+        text-align: center;
+        color: $dark-blue;
+    }
+    .tabs-features__item {
+        width: 100%;
+        border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+    }
+    .tabs-features__link {
+        padding: 20px 0;
+    }
+    .tabs-features__item:first-child {
+        border-top: 1px solid rgba(73, 93, 207, 0.2);
+    }
 }
