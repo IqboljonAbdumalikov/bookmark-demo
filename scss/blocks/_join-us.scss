@@ -60,3 +60,26 @@
         color: $dark-pink;
     }
 }
+
+@include breakpoint-down(500px) {
+    .join-us__wrapper {
+        width: auto;
+    }
+    .join-us__desc {
+        font-size: 12px;
+    }
+    .join-us__heading {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.075px;
+    }
+    .join-us__form {
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .join-us__input {
+        width: auto;
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+}
