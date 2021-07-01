@@ -5,6 +5,7 @@
     align-items: flex-start;
 }
 .site-hero__info__heading {
+    width: 100%;
     font-size: 48px;
     line-height: 52px;
     letter-spacing: -0.15px;
@@ -31,5 +32,40 @@
         margin: 380px auto 0;
         text-align: center;
         max-width: 500px;
+    }
+}
+
+@include breakpoint-down(600px) {
+    .site-hero__info {
+        width: 450px;
+    }
+}
+
+@include breakpoint-down(550px) {
+    .site-hero__info {
+        width: auto;
+    }
+    .site-hero__info__heading {
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: -0.09375px;
+    }
+    .site-hero__info__desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+@include breakpoint-down(345px) {
+    .site-hero__info {
+        width: auto;
+    }
+    .site-hero__info__heading {
+        font-size: 25px;
+        line-height: 35px;
+        letter-spacing: -0.09375px;
+    }
+    .site-hero__info__desc {
+        font-size: 15px;
+        line-height: 25px;
     }
 }

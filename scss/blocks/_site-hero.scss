@@ -23,5 +23,18 @@
     .site-hero {
         background-size: 950px 335px; 
         background-position: calc(50% + 200px) calc(50% - 200px);
+        padding-bottom: 63px;
+    }
+}
+@include breakpoint-down(500px) {
+    .site-hero {
+        background-size: 614px 254px; 
+        background-position: calc(50% + 130px) calc(50% - 200px);
+    }
+}
+@include breakpoint-down(350px) {
+    .site-hero {
+        background-size: 554px 234px; 
+        background-position: calc(50% + 130px) calc(50% - 200px);
     }
 }
