@@ -14,12 +14,15 @@
       <a class="site-header__logo logo" href="/">
         <img class="logo__img" src="./images/bookmark-site-header-logo.svg" alt="Bookmark site logo" width="149" height="50">
       </a>
-
+      
       <a class="site-header__logo logo--second" href="/">
         <img class="logo__img--second" src="./images/site-header-logo--white.svg" alt="Bookmark site logo" width="148" height="50">
       </a>
-
+      
       <button class="site-header__menu-toggler" type="button" aria-label="Open/Close Menu"></button>
+      
+      
+      
       <nav class="sitenav">
         <ul class="sitenav__list">
           <li class="sitenav__item">
@@ -29,13 +32,27 @@
             <a class="sitenav__link" href="#">Pricing</a>
           </li>
           <li class="sitenav__item">
-            <a class="sitenav__link" href="#">Contact</a>
+            <a class="sitenav__link sitenav__link--border-bottom" href="#">Contact</a>
           </li>
           <li class="sitenav__item">
             <a class="sitenav__link sitenav__link--bordered" href="#">Login</a>
           </li>
         </ul>
+        
+        <div class="site-header__socials socials--top">
+          <a class="socials__link" href="#">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="facebook-icon" fill-rule="evenodd" clip-rule="evenodd" d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325V22.676C0 23.407 0.593 24 1.325 24H12.82V14.706H9.692V11.084H12.82V8.413C12.82 5.313 14.713 3.625 17.479 3.625C18.804 3.625 19.942 3.724 20.274 3.768V7.008L18.356 7.009C16.852 7.009 16.561 7.724 16.561 8.772V11.085H20.148L19.681 14.707H16.561V24H22.677C23.407 24 24 23.407 24 22.675V1.325C24 0.593 23.407 0 22.675 0Z" fill="white"/>
+            </svg>
+          </a>
+          <a class="socials__link" href="#">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="twitter-icon" fill-rule="evenodd" clip-rule="evenodd" d="M24 2.55705C23.117 2.94905 22.168 3.21305 21.172 3.33205C22.189 2.72305 22.97 1.75805 23.337 0.608047C22.386 1.17205 21.332 1.58205 20.21 1.80305C19.313 0.846047 18.032 0.248047 16.616 0.248047C13.437 0.248047 11.101 3.21405 11.819 6.29305C7.728 6.08805 4.1 4.12805 1.671 1.14905C0.381 3.36205 1.002 6.25705 3.194 7.72305C2.388 7.69705 1.628 7.47605 0.965 7.10705C0.911 9.38805 2.546 11.522 4.914 11.997C4.221 12.185 3.462 12.229 2.69 12.081C3.316 14.037 5.134 15.46 7.29 15.5C5.22 17.123 2.612 17.848 0 17.54C2.179 18.937 4.768 19.752 7.548 19.752C16.69 19.752 21.855 12.031 21.543 5.10605C22.505 4.41105 23.34 3.54405 24 2.55705Z" fill="white"/>
+            </svg>
+          </a>
+        </div>
       </nav>
+      
     </div>
   </header>
   
@@ -76,27 +93,82 @@
           </li>
           
         </ul>
+      </div>
+      
+      <ul class="panels">
+        <li class="features__panels panels-features panels-features--active" id="simple-bookmarking">
+          <div class="container">
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Bookmark in one click</h3>
+              <p class="panel__desc">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Intelligent search</h3>
+              <p class="panel__desc">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Share your bookmarks</h3>
+              <p class="panel__desc">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+          </div>
+        </li>
         
-      </div>
-      <div class="features__panels panels-features">
-        <div class="container">
-          <section class="features__panel features__panel--active panel" id="simple-bookmarking">
-            <h3 class="panel__heading">Bookmark in one click</h3>
-            <p class="panel__desc">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <a class="panel__more-info" href="#">More info</a>
-          </section>
-          <section class="features__panel panel" id="speedy-searching">
-            <h3 class="panel__heading">Intelligent search</h3>
-            <p class="panel__desc">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-            <a class="panel__more-info" href="#">More info</a>
-          </section>
-          <section class="features__panel panel" id="easy-sharing">
-            <h3 class="panel__heading">Share your bookmarks</h3>
-            <p class="panel__desc">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-            <a class="panel__more-info" href="#">More info</a>
-          </section>
-        </div>
-      </div>
+        <li class="features__panels panels-features" id="speedy-searching">
+          <div class="container">
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Bookmark in one click</h3>
+              <p class="panel__desc">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Intelligent search</h3>
+              <p class="panel__desc">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Share your bookmarks</h3>
+              <p class="panel__desc">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+          </div>
+        </li>
+        
+        <li class="features__panels panels-features"  id="speedy-searching">
+          <div class="container">
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Bookmark in one click</h3>
+              <p class="panel__desc">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Intelligent search</h3>
+              <p class="panel__desc">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+            <section class="features__panel panel">
+              <h3 class="panel__heading">Share your bookmarks</h3>
+              <p class="panel__desc">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+              <a class="panel__more-info" href="#">More info</a>
+            </section>
+            
+          </div>
+        </li>
+      </ul>
+      
     </section>
     
     
@@ -143,28 +215,36 @@
           <p class="questions__info">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
         </header>
         <div class="questions__list">
-          <button class="questions__item">What is Bookmark?</button>
+          <button class="questions__item">
+            <span>What is Bookmark?</span>
+          </button>
           <div class="questions__toggler">
             <p class="questions__desc">
               A bookmark is a saved shortcut that directs your browser to a specific webpage. It stores the title, URL, and favicon of the corresponding page. ... For example, Chrome and Firefox display your bookmarks in an open window, while Safari displays them in a list in the sidebar of the browser window.
             </p>
           </div>
           
-          <button class="questions__item ">How can I request a new browser?</button>
+          <button class="questions__item">
+            <span>How can I request a new browser?</span>
+          </button>
           <div class="questions__toggler">
             <p class="questions__desc">
               Now more simple, secure, and faster than ever - with Google's smarts built in. Automatic protection from security issues like phishing and dangerous sites. Type less with autofill. One browser, all devices. Designed to keep you safe
             </p>
           </div>
           
-          <button class="questions__item">Is there a mobile app?</button>
+          <button class="questions__item">
+            <span>Is there a mobile app?</span>
+          </button>
           <div class="questions__toggler">
             <p class="questions__desc">
               Social media apps are some of the most popular types of mobile apps available. We build our social networks, and most of us check in with them every day. Facebook alone reports over 1 billion active daily users.
             </p>
           </div>
           
-          <button class="questions__item questions__item--fourth">What about other Chromium browsers?</button>
+          <button class="questions__item questions__item--fourth">
+            <span>What about other Chromium browsers?</span>
+          </button>
           <div class="questions__toggler">
             <p class="questions__desc questions__desc--last">
               Chromium is an free and open-source codebase for a web browser, principally developed and maintained by Google. Google uses the code to make its Chrome browser, which has additional features. The Chromium codebase is widely used.
@@ -191,22 +271,22 @@
       </div>
     </section>
   </main>
-
+  
   <footer class="site-footer">
     <div class="site-footer__container container">
       <a class="site-footer__logo" href="#">
-        <img src="./images/bookmark-site-footer-logo.svg" alt="Bookmark site logo" width="148" height="25">
+        <img class="site-footer__img" src="./images/bookmark-site-footer-logo.svg" alt="Bookmark site logo" width="148" height="25">
       </a>
       <ul class="site-footer__list">
-
+        
         <li class="site-footer__item">
           <a class="site-footer__link" href="#">Features</a>
         </li>
-
+        
         <li class="site-footer__item">
           <a class="site-footer__link" href="#">Pricing</a>
         </li>
-
+        
         <li class="site-footer__item">
           <a class="site-footer__link" href="#">Contact</a>
         </li>
@@ -216,12 +296,12 @@
         <a class="socials__link" href="#">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="facebook-icon" fill-rule="evenodd" clip-rule="evenodd" d="M22.675 0H1.325C0.593 0 0 0.593 0 1.325V22.676C0 23.407 0.593 24 1.325 24H12.82V14.706H9.692V11.084H12.82V8.413C12.82 5.313 14.713 3.625 17.479 3.625C18.804 3.625 19.942 3.724 20.274 3.768V7.008L18.356 7.009C16.852 7.009 16.561 7.724 16.561 8.772V11.085H20.148L19.681 14.707H16.561V24H22.677C23.407 24 24 23.407 24 22.675V1.325C24 0.593 23.407 0 22.675 0Z" fill="white"/>
-            </svg>
+          </svg>
         </a>
         <a class="socials__link" href="#">
           <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="twitter-icon" fill-rule="evenodd" clip-rule="evenodd" d="M24 2.55705C23.117 2.94905 22.168 3.21305 21.172 3.33205C22.189 2.72305 22.97 1.75805 23.337 0.608047C22.386 1.17205 21.332 1.58205 20.21 1.80305C19.313 0.846047 18.032 0.248047 16.616 0.248047C13.437 0.248047 11.101 3.21405 11.819 6.29305C7.728 6.08805 4.1 4.12805 1.671 1.14905C0.381 3.36205 1.002 6.25705 3.194 7.72305C2.388 7.69705 1.628 7.47605 0.965 7.10705C0.911 9.38805 2.546 11.522 4.914 11.997C4.221 12.185 3.462 12.229 2.69 12.081C3.316 14.037 5.134 15.46 7.29 15.5C5.22 17.123 2.612 17.848 0 17.54C2.179 18.937 4.768 19.752 7.548 19.752C16.69 19.752 21.855 12.031 21.543 5.10605C22.505 4.41105 23.34 3.54405 24 2.55705Z" fill="white"/>
-            </svg>
+          </svg>
         </a>
       </div>
     </div>

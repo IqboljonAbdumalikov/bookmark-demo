@@ -1,3 +1,13 @@
+var elSiteHeader = document.querySelector('.site-header');
+if(elSiteHeader) {
+  var elSiteHeaderMenuToggler = elSiteHeader.querySelector('.site-header__menu-toggler');
+}
+if(elSiteHeaderMenuToggler) {
+  elSiteHeaderMenuToggler.addEventListener('click', function() {
+    elSiteHeader.classList.toggle('site-header--open')
+  });
+}
+
 var elTabsFeatures = document.querySelector('.tabs-features');
 var elsTabsFeaturesItem = elTabsFeatures.querySelectorAll('.tabs-features__item');
 var elsTabsFeaturesLink = elTabsFeatures.querySelectorAll('.tabs-features__link');
@@ -16,10 +26,10 @@ if (elsTabsFeaturesLink.length > 0) {
       link.parentElement.classList.add('tabs-features__item--active');
 
       elsPanel.forEach(function (panel) {
-        panel.classList.remove('features__panel--active')
+        panel.classList.remove('panels-features--active')
       });
 
-      document.querySelector(link.getAttribute('href')).classList.add('features__panel--active');
+      document.querySelector(link.getAttribute('href')).classList.add('panels-features--active');
     });
   });
 }
